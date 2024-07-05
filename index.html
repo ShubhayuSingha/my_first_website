@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Shubhayu's Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css"> <!-- add your CSS file here -->
+</head>
+<body bgcolor="black">
+        <header> 
+                <h1 style="font-family: cursive;color: white;" id='typewriter-heading'>SHUBHAYU SINGHA</h1>
+                <h2 style="color: white">This is me! Shubhayu! And this is my simple website!</h2>
+                         
+        </header>
+        <main>
+                <p style="font-size: 24px; color: white">
+                I know that for hosting a website, HTML, CSS and JAVASCRIPT are required, but I am just trying to learn how to host a simple and basic website so I just learned the bare minimum. As I learn more skills, I am going to progressively upgrade the website. The fact that I can host a website, intrigues me more than the fact that I can host a fancier website.
+                <br><br><br><br>
+                </p>
+        </main>  
+
+                <ul>
+<li style="font-size: 20px; line-height: 2; color: white">To buy my laptop: <a href="https://www.amazon.in/Acer-i5-13420H-Graphics-Display-ANV15-51/dp/B0CHJJZ9G8/ref=sr_1_1_sspa?sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" style="color:lightpink" target="_blank">Click here!</a></li>
+<li style="font-size: 20px; line-height: 2; color: white">For Progress Report: <a href="progress.html" style="color: lightpink">Click here!</a></li>
+<li style="font-size: 20px; line-height: 2; color: white">For Emotional Quotes: <a href="motivation.html" style="color:lightpink">Click here!</a></li>
+                </ul>
+                <script>                        
+                        let index = 0;
+                        const speed = 50; // Typing speed in milliseconds
+                        let  text = ''
+                
+                        function typeWriter() {
+                            if (index < text.length) {
+                                document.getElementById('typewriter-heading').innerHTML += text.charAt(index);
+                                index++;
+                                setTimeout(typeWriter, speed);
+                            }
+                        }
+                
+                        // Start the typewriter effect when the page loads
+                        function startTypewriter(newText) {
+                                text = newText;
+                                index = 0;
+                                document.getElementById('typewriter-heading').innerHTML = ''; // Clear previous text
+                                typeWriter();
+                        }
+                        window.onload = function() {
+                        const initialText = document.getElementById('typewriter-heading').textContent;
+                        startTypewriter(initialText);
+                        };
+                </script>
+              
+</body>
+</html>
