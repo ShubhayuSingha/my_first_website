@@ -8,7 +8,7 @@
     <p style="font-size: 18px; color: white">To go back to homepage: <a href="index.html" style="color: lightpink">Click here</a></p>
   <h1><p style="color: lightgoldenrodyellow">Motivate Yourself</p></h1>
   
-  <font size="10"><button id="quoter" onclick="generateRandomWord()">Quote Button</button></font>
+  <button id="quoter" onclick="generateRandomWord()" style="font-size: 24px; color: red">Quote Button</button>
   <p id="messageArea" style="color: white"></p>
 
   <div id="word-display">
@@ -66,7 +66,7 @@
     // Function to generate and display a random word
     function generateRandomWord() {
         if (history.length === words.length) {
-               
+        document.getElementById('quoter').textContent = "Invalid";        
         document.getElementById('quoter').disabled = true;
         document.getElementById('messageArea').textContent = 'No more quotes available for now.';
         return;
